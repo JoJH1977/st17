@@ -83,30 +83,34 @@
 <table border="1" class="test"></table>
 <thead>
   <tr>
-    <td>제목</td>
-    <td>제목</td>
+    <th>제목</th>
+    <th>제목</th>
     <th colspan="2">제목</th>
     <!--<td>내용</td> 제거-->
   </tr>
 </thead>
+
 <tbody>
   <tr>
-    <td rowspan="2">제목</td>
+    <th rowspan="2">제목</th>
     <td>내용</td>
     <td>내용</td>
     <td>내용</td>
   </tr>
-</tbody>
-<tr>
+
+  <tr>
   <!--<td>내용</td>--병합을 위해제거-->
   <td>내용</td>
   <td>내용</td>
   <td>내용</td>
 </tr>
 
+</tbody>
+
+
 </table>
 <style>
-  .test>thead{background-color: blueviolet;}
+  .test>thead{background-color: #8866cc;}
   .test>tbody{background-color: #cc8866;}
 </style>
 </body>
