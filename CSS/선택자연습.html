@@ -20,6 +20,30 @@ section p{background-color: #ccc;}*/
 
 /* section > p ->부모 > 자식 : >자식 선택자 */
 section > p {background-color: #ccc;}
+/* 
+모든 section태그의 후손중 모든 p태그
+section> p
+ */
+/* 모든 section태그의 후손중 모든 직계자식 p태그 
+section>p
+*/
+
+/* 모든 section태그의  직계자식 모든 .box태그의 자식 모드 p
+section > .box>p
+section > div.box>p
+section > box>p{color: #f00;}
+ */
+
+ /* 형요소 ~ 아우요소
+ 요소1~요소2 :요소1 아래 동생인 모든 요소들
+  section h2 ~ p{color: #f00;}
+  */
+
+  /* 형요소 +바로 아래동생요소
+  요소1 + 요소2 :요소1에 바로 인접한 요소2 */
+ section h2 + p{color: #f00;}
+
+
 
   </style>
 </head>
@@ -33,7 +57,7 @@ section > p {background-color: #ccc;}
   <!-- p+.box>h1+p*2 -->
   <p>섹션슬로건1</p>
   <div class="box">
-    <h2>센션타이틀1</h2>
+    <h2>섹션타이틀1</h2>
     <p>이벤트 설명1</p>
     <p>이벤터 설명2</p>
   </div>
@@ -41,14 +65,14 @@ section > p {background-color: #ccc;}
 <section id="section2">
   <p>섹션슬로건1</p>
   <div class="box">
-    <h2>센션타이틀1</h2>
+    <h2>섹션타이틀1</h2>
     <p>이벤트 설명1</p>
     <p>이벤터 설명2</p>
   </div></section>
 <section id="section3">
   <p>섹션슬로건1</p>
   <div class="box">
-    <h2>센션타이틀1</h2>
+    <h2>섹션타이틀1</h2>
     <p>이벤트 설명1</p>
     <p>이벤터 설명2</p>
   </div></section>
