@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>border-radius</title>
+  <!-- 가장자리굴리기 -->
+   <style>
+    *{margin: 0; padding: 0;}
+    .box{
+      width: 100px;
+      height: auto;
+      min-height: 100px;
+      margin:20px;
+
+
+      background-color: #ccc;
+    }
+    .box1{border-radius: 10px;}
+    .box2{border-radius: 10px 20px 30px 40px;}
+    /* .box3{border-radius: 50% 0 50% 0;} */
+    .box3{border-radius: 50% 0 ;}
+    .box4{border-radius: 50%;}
+    .box5{border-radius: 0 0 50% 50%;}
+    .box6{
+      width: 200px;
+     height: 100px;
+      border-radius: 50px;}
+
+
+      /* 키워드배너 */
+      /*1.키워드를 한줄로 표현해야함 , 부모안에서 가운데정렬(keyword1.2)
+          키워드 안 내용에서도 가운데 정렬
+        2.키워드에 테두리 모서리둥굴게 
+        3.keyword1.2 상하의 여백
+      */
+      section{
+        margin-top:50px;
+      }
+.keyword-wrap{
+  text-align: center; /*1*/
+  /* margin:50px 0;  */
+}
+
+      div.keyword1{margin-bottom: 10px;} /*3*/
+      
+      div.keyword-item{
+        
+        display: inline-block; /*1*/
+        padding:0 1rem; 
+        line-height:40px; /*한줄문자일때 높이 지정* 아래 이미 1픽셀들어가있어서 42px 가 된다*/
+
+        border:1px solid #efefef; /*2*/
+        border-radius: 21px;
+
+      }
+
+   </style>
+</head>
+<body>
+<section>
+  <div class="keyword1 keyword-wrap">
+    <div class="keyword-item">keyword001</div>
+    <div class="keyword-item">key2</div>
+    <div class="keyword-item">keyword003</div>
+    <div class="keyword-item">word004</div>
+    <div class="keyword-item">word005</div>
+    <div class="keyword-item">word006</div>
+
+    <div class="keyword2 keyword-wrap">
+      <div class="keyword-item">keyword001</div>
+      <div class="keyword-item">key2</div>
+      <div class="keyword-item">word003</div>
+      <div class="keyword-item">word004</div>
+      <div class="keyword-item">word005</div>
+    </div>
+  </div>
+</section>
+  <hr>
+  <div class="box box1"></div>
+  <div class="box box2">123</div>
+  <div class="box box3"></div>
+  <div class="box box4"></div>
+  <div class="box box5"></div>
+  <div class="box box6"></div>
+
+ 
+
+</body>
+</html>
