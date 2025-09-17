@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인라인레벨과 블럭레벨</title>
+  <style>
+    *{margin:0; padding: o;}
+    .container{
+     
+      /* width:80%;
+      margin:0 auto; */
+      background-color: #ccc;
+      }
+      .inner{
+         /* 부모의 content 영역의 80% */
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 50px 0;
+/* background-color: #ef6; */
+      }
+      .box{
+        /* margin:50px auto; */
+        margin-bottom: 50px;
+
+        background-color: #fbdb;
+      }
+
+      .box:last-child{
+        margin-bottom:50px;
+
+      }
+
+      .box span{
+        /* 인라인레벨 width/height 지정x
+        수직여백정상적으로 적용되지않음
+        크기는 포함하는 내용으로 결정 */
+        color: #f00;
+        font-weight: bold;
+        font-size: large;
+        background-color: #ef8;
+        padding:16px;
+        margin:8px;
+        width:8px;
+
+      }
+
+
+  </style>
+</head>
+<body>
+<div class="inner">
+  <div class="container">
+    <div class="box box1">
+      Lorem <span>ipsum</span> dolor sit amet consectetur adipisicing <span>elit</span>. Explicabo, culpa eius. Excepturi
+      consectetur nobis obcaecati ducimus fugit beatae, explicabo esse expedita enim soluta accusantium, sed
+      exercitationem minima quod assumenda facilis.</div>
+    
+      <div class="box box2">Quod quos fugit in, dolorum quia reprehenderit fuga, vel nihil consequatur tempora nulla nobis
+      maiores quae veritatis dolores amet eaque? Earum dolores magnam ullam quae numquam ipsa cupiditate voluptatibus
+      sunt!</div>
+
+       <div class="box box3">Quod quos fugit in, dolorum quia reprehenderit fuga, vel nihil consequatur tempora nulla nobis
+      maiores quae veritatis dolores amet eaque? Earum dolores magnam ullam quae numquam ipsa cupiditate voluptatibus
+      sunt!</div>
+  </div>
+</div>
+
+</body>
+</html>
