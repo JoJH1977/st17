@@ -25,9 +25,39 @@ background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 
       border:1px solid #000;
       border-radius: 0.5em;
       padding: 0.5em;
+      z-index: 100;
     }
     .media-txt::before{
-      content: "pc";
+      content: "wide desk";
+    }
+
+    @media(max-width:1199.98px){
+        .media-txt::before{
+      content: "desk";
+    }
+    }
+
+    @media(max-width:1023.98px){
+        .media-txt::before{
+      content: "tablet";
+    }
+  }
+        @media(max-width:767.98px){
+        .media-txt::before{
+      content: "tablet";
+    }
+    }
+
+    /* @media(max-width:576.98px){
+        .media-txt::before{
+      content: "mobile";
+    }
+  } */
+      @media(max-width:576.98px) and (orientation: portrait){
+        .media-txt{left: 30px ;top: 20px;}
+        .media-txt::before{
+      content: "mobile potrait";
+    }
     }
 
 
@@ -74,8 +104,9 @@ box-shadow: 0px 0px 30px 5px rgba(0 , 0, 0, 0.4);
 
 /* 
 media query 
-*/
-
+*/*****
+/* @media(max-width:1199.98px)
+***** */
 @media(max-width:1199.98px){
   /* 1199.98보다 작은 */
   .container{
@@ -84,6 +115,9 @@ background: linear-gradient(183deg, rgba(232, 81, 219, 0) 0%, rgba(232, 81, 219,
   }
 }
 
+/* ****
+@media(max-width:767.98px)
+ *****/
 @media(max-width:767.98px){
   /* 767.98보다 이하인 미디어 디자인css */
   .container{
@@ -96,6 +130,14 @@ background: linear-gradient(183deg, rgba(232, 81, 219, 0) 0%, rgba(232, 81, 219,
   .media-box .media-wrap{
     border-radius: 12px;
   }
+}
+
+/* 이거 뭔가 안되었다 다시 확인해볼것 */
+@media(max-width:576.98px) and (orientation: portrait){
+  .media-box .media-wrap{
+    aspect-ratio: 3/4;
+  }
+
 }
   </style>
 </head>
