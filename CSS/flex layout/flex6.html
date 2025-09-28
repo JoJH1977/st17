@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>flex5 - flex item margin auto값을 주었을 때</title>
+  <title>flex6 - flex 와 position</title>
   <style>
     *{margin: 0; padding: 0; box-sizing: border-box;}
     body{margin-top: 50px;}
@@ -23,25 +23,18 @@
       width: 200px; min-height: 30px;
       background: #cf6;
     }
-    /* flex */
-    .container{
-      display: flex;
-      /* flex-direction: row; item 배치 좌-우*/
-      /* flex-wrap: nowrap; */
-      justify-content: start;/*주축 정렬*/
-      /*align-items: center; 교차축 가운데*/
-      align-items: end;
-      gap:20px;
-    }
 
-    .item{
-      /* flex-grow: 0;
-      flex-shrink: 1;
-      flex-basis: auto; */
-    }
-   .item3{
-     margin-left: auto;/*container의 여유공간을 다가져라*/
-   }
+    /* flex */
+.container{
+  position: relative; /*기준요소주기*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item3{
+  position: absolute; /*부모기준으로 위치 지정설정*/
+  right: 30px; bottom: 30px;
+}
   </style>
 </head>
 <body>
