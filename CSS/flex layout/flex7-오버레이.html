@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flex7 갤러리 부모의 크기에 따라 유동적 크기(비율 유지)</title>
+    <title>flex7- 오버레이</title>
     <style>
         *{margin:0; padding: 0; box-sizing: border-box;}
         body{
@@ -20,6 +20,7 @@
         }
         .card-wrap{
             position: relative; /*.card-item .overlay 기준요소*/
+            overflow: hidden; /*.card-wrap 밖에있는 자식은 보이지말아라*/
         }
         .card-item{
         }
@@ -32,12 +33,66 @@
             height: auto;
             object-fit: cover;
         }
+        /*오버레이가 그림과 동일한 크기*/
         .card-item .overlay{
-            position: absolute;
-            left:0; top:0;
-            width: 100%; /*기준요소의 너비의 콘텐츠 영역을 가져와요*/
+   
+
+            background-color: rgba(0,0,255,0.5);
+            color: #fff;
         }
-        /* flex */
+       .card-item .overlay > p{
+        padding: 0.2em 0.5em;
+        }
+
+        /*overlay:hover 위->아래 반투명 점점 불투면*/
+
+
+        /*오버레이 아이템 정렬_ 수직수평 가운데*/
+        .card-item .overlay{
+          /*위치잡기*/
+                   position: absolute;
+            left:0; top:0;
+
+/*기준요소 밖으로 배치*/
+transform: translateY(-100%);
+transition: all 0.2s;
+
+            /*기준요소의 너비높이를 따르게할때*/
+            width: 100%; /*기준요소의 너비의 콘텐츠 영역을 가져와요*/
+            height: 100%; /*기준요소의 높이의 콘텐츠 영역을 가져와요*/
+
+/*오버레이의 자식요소들의 정렬을 위해서*/
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          /*오버레이요소 안에 후손 online 들의 정렬*/
+          text-align: center;
+
+
+        }
+
+        .card-wrap:hover .card-item .overlay{
+          transform: translateY(0);
+          transition: all 0.4s;
+
+        }
+
+        /* flex 기본순서
+1. flex container를 지정 display:flex
+2. flex-direction 방향
+3. (선택)아이템의 총합의 크기가 container의 크기보다 클때 줄바꿈 여부 결정 flex-wrap
+4. 아이템과 아이템 사이에 여백 여부 결정 gap
+5. 아이템을 덩어리로 주축의 방향을 정렬 justify-content
+6. 아이템을 덩어리로 교차축의 방향을 정렬 align-items
+7. (선택)아이템이 줄바꿈을 했다면 교차축의 정렬결정 aling-content
+8. item 자동 키우기 flex-grow 0
+9. item 자동 수축 flex-shrink 1
+10. 아이템 기본크기 flex-basis auto
+11. 아이템 너비높이 크기 지정
+*/
+
+
         /* flex container   => .card-list */
         .card-list{
             /* width: 1000px; */
@@ -107,7 +162,9 @@
                     <div class="thubm"><img src="https://picsum.photos/400/300?random=1" alt=""></div>
                     <div class="overlay">
                         <p class="title">포트폴리오 제목</p>
-                        <p class="desc">lorem6</p>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur.
+                
+                        </p>
                     </div>
                 </div>
             </div>
@@ -115,8 +172,8 @@
                 <div class="card card-item">
                     <div class="thubm"><img src="https://picsum.photos/400/300?random=2" alt=""></div>
                     <div class="overlay">
-                        <p class="title">포트폴리어 제목</p>
-                        <p class="desc">lorem6</p>
+                        <p class="title">포트폴리오 제목</p>
+                        <p class="desc">Lorem, ipsum dolor.</p>
                     </div>
                 </div>
             </div>
@@ -125,7 +182,7 @@
                     <div class="thubm"><img src="https://picsum.photos/400/300?random=3" alt=""></div>
                     <div class="overlay">
                         <p class="title">포트폴리어 제목</p>
-                        <p class="desc">lorem6</p>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
                     </div>
                 </div>
             </div>
