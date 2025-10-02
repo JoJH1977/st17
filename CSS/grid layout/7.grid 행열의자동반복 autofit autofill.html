@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.grid 행렬의 자동반복 auto-fit auto-fill</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body{margin: 50px;}
+    .grid-container *{box-sizing: border-box;}
+    /*모양*/
+    .grid-container{
+      background-color: pink;
+      min-height: 600px; /*정렬을 위해서 테스트용*/
+    }
+    .item{
+      background-color: dodgerblue;
+      border: 1px solid darkblue;
+
+      /*갤러리디자인을 위한 */
+      /* aspect-ratio: 4/3; */
+      aspect-ratio: 1; /*auto-fit 을 위한 설정*/
+    }
+    /*grid*/
+    .grid-container{
+      /*1.grid 선언*/
+      display: grid;
+      /*2.행열의 수와 크기를 선언*/
+      /* 자동반복 반응형 (갤러리)
+      repeat(keyword, 크기) 
+      keyword> auto-fill , auto-fit
+      auto-fill 빈공간에 행/열 자리배치
+      auto-fit 빈공간은 빈공간처리 
+      
+      auto-fit + fr 반응형
+      minmax(최소값, 최대값)
+      */     
+      grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+
+
+      /*3. 정렬을 지정*/
+      /*content 는 container 안에서의 item 덩어리들의 정렬을 의미*/
+      justify-content:start; /*컨테이너안에서의 수평정렬*/
+      align-content: center;
+     
+      /*4. item 간의 여백
+      container 와 item 사이에 여백이 생기지않음
+      gap: 수평 수직 순서
+      justify-content:; align-content: ;
+      위 값이 설정되어있을때는 gap 이 무시 당함
+      */
+      gap: 10px 10px;
+
+      /*
+      6.정렬선언
+      */
+      /*container 정렬선언 */
+      /* item 정렬선언 */
+      /* 컨테이너 안에서 아이템 덩어리의 정렬 결정  */
+      /* justify-content: center ;/*수평*/
+      /*row의 값을 auto*/
+      /*align-content: stretch; 수직 */
+
+            /*
+            4.
+      2줄 3칸
+      아이템9개
+      아이템1 아이템2 아이템3
+      아이템4 아이템5 아이템6
+
+      지정된 열행 외의 아이템들 
+      아이템7 아이템8 아이템9 -> 암시적그리드 라고 함
+      grid-auto-row, grid-suto-colomn  암시적 그리드 
+      */
+/* grid-auto-rows: 100px; */
+    }
+
+ 
+
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+    <div class="item">item8</div>
+    <div class="item">item9</div>
+ 
+  </div>
+</body>
+</html>

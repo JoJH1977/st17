@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.giid행열크기지정</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body{margin: 50px;}
+    .grid-container *{box-sizing: border-box;}
+    /*모양*/
+    .grid-container{
+      background-color: pink;
+      min-height: 600px; /*정렬을 위해서 테스트용*/
+    }
+    .item{
+      background-color: dodgerblue;
+      border: 1px solid darkblue;
+    }
+    /*grid*/
+    .grid-container{
+      /*1.grid 선언*/
+      display: grid;
+      /*2.행열의 수와 크기를 선언*/
+      /*3행 100 300 100
+      각행의 크기는 1행 100 2행 300 3행 100px*/
+      grid-template-rows: 100px 300px 100px;        
+      /*3열 100 200 400
+      각열의 크기는 1행 100 2행 200 3행 400px*/
+      /* grid-template-columns: 100px 200px 400px; */
+      /* grid-template-columns: 100px 1fr 400px; */
+      /*12grid*/
+      /* grid-template-columns: 6fr 3fr 3fr; */
+      /* grid-template-columns: 4fr 4fr 4fr; */
+      /* grid-template-columns: repeat(3, 4fr); */
+      /* grid-template-columns: 100px 200px minmax(500px, 1fr); */
+      grid-template-columns: 100px 200px minmax(500px, 800px);
+
+      /*3. 정렬을 지정*/
+      /*content 는 container 안에서의 item 덩어리들의 정렬을 의미*/
+      justify-content:start; /*컨테이너안에서의 수평정렬*/
+      align-content: center;
+     
+      /*4. item 간의 여백
+      container 와 item 사이에 여백이 생기지않음
+      gap: 수평 수직 순서
+      justify-content:; align-content: ;
+      위 값이 설정되어있을때는 gap 이 무시 당함
+      */
+      gap: 10px 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+    <div class="item">item8</div>
+    <div class="item">item9</div>
+  </div>
+</body>
+</html>
