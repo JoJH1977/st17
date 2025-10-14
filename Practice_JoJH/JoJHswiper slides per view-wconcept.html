@@ -17,6 +17,13 @@
       margin-top: 50px;
     }
 
+    .visual-section{
+      overflow: hidden;
+    }
+    .myslide.swiper{
+      width: 80%;
+      overflow: visible;
+    }
     .myslide {
       /* width: 600px; */
     }
@@ -31,6 +38,12 @@
     */
     .swiper-slide{
       /* width:50%; */
+      opacity: 0.5;
+      filter: grayscale(70%);
+    }
+    .swiper-slide.swiper-slide-active{
+      opacity: 1;
+      filter: grayscale(0);
     }
 
     .swiper-slide img {
@@ -45,25 +58,25 @@
 
 <body>
   <!-- Slider main container -->
-  <div class="swiper myslide">
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=1" alt=""></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=2" alt=""></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=3" alt=""></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=4" alt=""></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=5" alt=""></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=6" alt=""></div>
+  <div class="visual-section">
+    <div class="swiper myslide">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="https://picsum.photos/800/600?random=1" alt=""></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/800/600?random=2" alt=""></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/800/600?random=3" alt=""></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/800/600?random=4" alt=""></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/800/600?random=5" alt=""></div>
+        <div class="swiper-slide"><img src="https://picsum.photos/800/600?random=6" alt=""></div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
   </div>
 
 
