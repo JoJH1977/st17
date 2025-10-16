@@ -2,7 +2,6 @@
 mystyle
 */
 
-.ec-base-product .prdList{}
 .ec-base-product .prdList{
   display: flex;
   flex-wrap: wrap;
@@ -11,8 +10,7 @@ mystyle
   /* border: 1px solid #f00; */
 }
 .main_product_slide .ec-base-product .prdList{
-  display:flex;
-
+ flex-wrap: nowrap;
 
 }
 
