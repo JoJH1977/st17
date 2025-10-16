@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko">
 
-<head>
+<html>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="format-detection" content="telephone=no" />
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <!-- // PG크로스브라우징필수내용 -->
 
-  <title>ouii-템플릿</title>
+  <title>hero banner</title>
   <link rel="stylesheet" href="">
 
 
@@ -58,12 +58,9 @@
   <!-- theme02 -->
   <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;700&display=swap" rel="stylesheet">
   <!-- theme03 -->
-
   <!-- 스와이퍼와 css js 연결 -->
-    <link rel="stylesheet" href="/ouii/layout/basic/css/swiper.min.css">
-    <script src="/ouii/layout/basic/js/swiper-bundle.min.js"></script>
-
- 
+  <link rel="stylesheet" href="/ouii/layout/basic/css/swiper.min.css">
+  <script src="/ouii/layout/basic/js/swiper-bundle.min.js"></script>
 
   <!--@css(/layout/basic/css/swiper.min.css)-->
   <!--@js(/layout/basic/js/swiper-bundle.min.js)-->
@@ -89,67 +86,43 @@
     <!--@import(/layout/basic/sidebar.html)-->
     <div id="container" data-ez="layout-187eug1-1">
       <div id="contents">
-        <!-- 메인 콘텐츠 영역 -->
-        <!--@contents-->
-        <body>
-  <!-- Slider main container -->
-   <!-- swiper 스크립트 지정할 요소 => myname-->
-    <!-- 스크립트 지정할 클래스명을 동일하게 사용하면 문제가 발생  -->
-<div class="swiper myname">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=1" alt=""></div>
-    <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=2" alt=""></div>
-    <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=3" alt=""></div>
-     <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=4" alt=""></div>
-    <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=5" alt=""></div>
-    <div class="swiper-slide"><img src="https://picsum.photos/400/300?random=6" alt=""></div>
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <!-- 여기서부터 컨텐츠 -->
+  <section class="section visual-section">
+    <div class="swiper visula_swiper">      
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/ouii/myfolder/images/imgi_1.png" media="(min-width:768px)">
+            <img src="/ouii/myfolder/images/imgi_1m.png" alt="">
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/ouii/myfolder/images/imgi_2.png" media="(min-width:768px)">
+            <img src="/ouii/myfolder/images/imgi_2m.png" alt="">
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/ouii/myfolder/images/imgi_3.png" media="(min-width:768px)">
+            <img src="/ouii/myfolder/images/imgi_3m.png" alt="">
+          </picture>
+        </div>
+        
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+  
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
 
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-</div>
-<script>
-  // const swiper = new Swiper(★★★'.swiper'★★★, {
-  //  html요소중 .swiper에 Swiper를 연결하겠다
-  const swiper = new Swiper('.myname', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  autoplay: {
-  delay: 2500,
-  disableOnInteraction: false,
-},
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    // type : 'fraction',
-    // type : 'progressbar',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
-</script>
-</body>
-        <!-- 여기에 테스트 콘텐츠 복사 -->
-
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+     </section>
 
       </div>
     </div>
@@ -171,8 +144,7 @@
       </div>
     </div>
   </div>
-
-
+ <!-- ----------------------------------------------------------------- -->
 
   <div class="layer_shadow" id="layer_shadow"></div>
   <div class="layer_shadow" id="layer_shadow_search"></div>
@@ -193,6 +165,36 @@
   <!--@css(/layout/basic/css/add_theme02.css)-->
   <!--@css(/layout/basic/css/add_theme03.css)-->
   <!--@css(/layout/basic/css/add_layout.css)-->
+
+  <script>   
+    const visual_swiper = new Swiper('.visula_swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        // type : 'fraction',
+        // type : 'progressbar',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  </script>
 </body>
 
 </html>
