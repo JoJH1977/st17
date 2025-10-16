@@ -2,7 +2,7 @@
 mystyle
 */
 
-.ec-base-product .prdList{
+.ec-base-product .prdList{}
 .ec-base-product .prdList{
   display: flex;
   flex-wrap: wrap;
@@ -12,7 +12,7 @@ mystyle
 }
 .main_product_slide .ec-base-product .prdList{
   display:flex;
-  
+
 
 }
 
@@ -212,12 +212,9 @@ main_title이 content 너비 범위에서 left/center/right 정렬
   --section-bg:#fea;
   --section-padding-top-bottom:40px;
   --section-main-banner-padding:16px;
-
 }
 
 /*         max-width: 1230px; */
-
-
 #contents > .section_full_content_center{
   background-color: var(--section-bg);
   width:100%;
@@ -225,14 +222,13 @@ main_title이 content 너비 범위에서 left/center/right 정렬
   padding-top:var(--section-padding-top-bottom);
   padding-bottom:var(--section-padding-top-bottom);
 }
-#contents >  .main_3dan_banner.section_full_content_center .main_banner_txt{
-  margin-top:0 ;
-  padding: 16px;
-  background-color: #fff;
-  box-sizing: border-box;
 
+#contents > .section_full_content_center .main_3dan_banner .main_banner_txt{
+   margin-top:0;
+   padding:var(--section-main-banner-padding);
+   background-color: #fff;
+   box-sizing: border-box;
 }
-
 
 @media (min-width: 1024px) {
     #contents > .section_full_content_center > div{
@@ -259,9 +255,37 @@ main_title이 content 너비 범위에서 left/center/right 정렬
 
 @media (min-width: 1024px) {
     #contents > .section_full_only_content > .main_title{
-        max-width: 1230px;
+       max-width: 1230px;
         width: 92%;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto;       
     }
+}
+
+/* 
+visual-swiper
+hero section 용 */
+
+.visual-section{
+  --visual-swiper-width:100%
+}
+@media (min-width: 1024px) {
+    #contents > .visual-section {
+        max-width: none;
+        width: 100%;
+    }
+}
+.visual-section .visual_swiper{
+  width: var(--visual-swiper-width);
+}
+.visual-section .swiper .swiper-slide{}
+.visual-section .swiper-slide picture{
+  display: block;
+}
+.visual-section .swiper-slide picture source,
+.visual-section .swiper-slide picture img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
 }
