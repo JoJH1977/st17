@@ -4,18 +4,16 @@ mystyle
 
 
 /* *******************************
-변수
+변수 variables
 ******************** */
 :root{
 --primary-color:#1f1f1f;
 }
 
 
-
 /* *******************************
 .prdList
 ******************** */
-
 
 .ec-base-product .prdList{
   display: flex;
@@ -26,7 +24,6 @@ mystyle
 }
 .main_product_slide .ec-base-product .prdList{
  flex-wrap: nowrap;
-
 }
 
 .ec-base-product .prdList >li{
@@ -378,7 +375,7 @@ transform-origin:center center;
   align-items: center;
   gap:2rem;
   box-sizing: border-box;
-  padding-top: 0.5rem 0;
+  padding: 0.5rem 0;
 }
 
 /* flex item */
