@@ -347,12 +347,38 @@ bu-swiper
     border:4px solid var(--primary-color);
 }
 
-.ub-swiper.ub-swiper-controls-bottom{}
+/* 
+swiper controls 가 슬라이드 아래 표시
+ */
+
+.ub-swiper.ub-swiper-controls-bottom{
+width: 80%;
+margin: 0 auto;
+
+}
+.ub-swiper.ub-swiper-controls-bottom .swiper-wrapper{
+  /*align-items: end; 하단에 정렬*/
+/*  */
+  align-items: center;
+}
+.ub-swiper.ub-swiper-controls-bottom .swiper-slide{
+  width: 100% !important;
+  transform: scale(0.9);
+
+transform-origin:center center;
+
+ /* transform-origin:center bottom; 슬라이드를 하단에 정렬할때는 transform-origin*/
+  /* transition: transform ; */
+}
+.ub-swiper.ub-swiper-controls-bottom .swiper-slide-active{
+ transform: scale(1);
+}
 .ub-swiper.ub-swiper-controls-bottom .ub-swiper-controls{
   display: flex;
   align-items: center;
   gap:2rem;
   box-sizing: border-box;
+  padding-top: 0.5rem 0;
 }
 
 /* flex item */
