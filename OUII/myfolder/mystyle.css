@@ -7,7 +7,7 @@ mystyle
 변수
 ******************** */
 :root{
---primary-color:#080808;
+--primary-color:#1f1f1f;
 }
 
 
@@ -310,11 +310,11 @@ ub-swiper
  .ub-swiper .swiper-button-prev,
  .ub-swiper .swiper-button-next{
   width:60px; height: 60px;
-  background-size: cover;
+  background-size: contain;
  }
 .ub-swiper .swiper-button-prev{
     background-image: url(images/arrow_back.svg);
-   background-position: left center;
+   background-position: center;
     left: 20px;
     right: auto;
 }
@@ -342,18 +342,41 @@ ub-swiper
 .ub-swiper.ub-swiper-controls-bottom{}
 .ub-swiper.ub-swiper-controls-bottom .ub-swiper-controls{
   display: flex;
+  align-items: center;
+    flex-wrap: nowrap;
+  gap: 2rem;
+  box-sizing: border-box;
 }
+/* flex-item */
 .ub-swiper.ub-swiper-controls-bottom .ub-swiper-controls>div{
   position: static;
+  box-sizing: border-box;  
+
 }
 .ub-swiper.ub-swiper-controls-bottom .ub-swiper-controls .swiper-scrollbar{
   order:1;
+  width: 100%;
+  height: 4px;
 }
-.ub-swiper.ub-swiper-controls-bottom .swiper-pagination-fraction {
+.ub-swiper.ub-swiper-controls-bottom .swiper-pagination-fraction{
   order:2;
   width: auto;
+
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1rem; 
 }
 .ub-swiper.ub-swiper-controls-bottom .swiper-button-next,
 .ub-swiper.ub-swiper-controls-bottom .swiper-button-prev{
   order:3;
+  width: 28px; height: 28px;
+  margin-top: 0px;
+  border: 1px solid #ccc;
+}
+.ub-swiper.ub-swiper-controls-bottom .swiper-button-prev{
+  background-position: -4px center;
+}
+
+.ub-swiper.ub-swiper-controls-bottom .swiper-button-next{
+  margin-left: -0.8rem;
 }
