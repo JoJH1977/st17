@@ -2,6 +2,21 @@
 mystyle
 */
 
+
+/* *******************************
+변수
+******************** */
+:root{
+--primary-color:#080808;
+}
+
+
+
+/* *******************************
+.prdList
+******************** */
+
+
 .ec-base-product .prdList{
   display: flex;
   flex-wrap: wrap;
@@ -286,4 +301,29 @@ hero section 용 */
   width: 100%;
   height: auto;
   max-width: none;
+}
+/*
+ub-swiper
+1.navigation 이미지 변경 
+ */
+  .ub-swiper .swiper-button-prev{
+    background-image: url(images/arrow_back.png)
+    left: 10px;
+    right: auto;
+}
+
+ .ub-swiper .swiper-button-next{
+    background-image: url(images/arrow_forward.png)
+    left: auto;
+    right: 20px;
+}
+
+.ub-swiper .swiper-pagination-bullet{
+  vertical-align: middle;
+}
+
+.ub-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: transparent;
+    border:4px solid var(--primary-color);
 }
