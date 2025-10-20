@@ -267,8 +267,8 @@ hero section 용 */
 .visual-section{
   --visual-swiper-width:100%
 }
-@media (min-width: 1024px) {
-    #contents > .visual-section {
+@media (max-width: 1024px) {
+    #container #contents.ub-style{
         max-width: none;
         width: 100%;
     }
