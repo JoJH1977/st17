@@ -8,6 +8,7 @@ jQuery(document).ready(function ($) {
     if ($visual.hasClass("swiper-initialized")) {
       visual_swiper = $visual[0].swiper || null;
     } else {
+      console.log("test");
       // Swiper 인스턴스 생성
       visual_swiper = new Swiper(".visual_swiper", {
         direction: "horizontal",
