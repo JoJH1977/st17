@@ -16,7 +16,7 @@
 
   <title>hero banner</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="">
 
 
   <link rel="stylesheet" href="/ouii/layout/basic/css/common.css"><!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
@@ -84,13 +84,24 @@
   </div>
   <div id="wrap">
     <!--@import(/layout/basic/header.html)-->
-    <!--@import(/layout/basic/sidebar.html)-->    
+    <!--@import(/layout/basic/sidebar.html)-->
+
+    <!-- 
+    ub-swiper-controls-bottom 클래스를 추가할때
+    swiper 스크립트의 
+    pagination  type:'fraction' 변경
+
+
+    
+    -->
+
     <div id="container" data-ez="layout-187eug1-1">
       <div id="contents" class="ub-style">
 
+
         <!-- 여기에 콘텐츠 -->
         <section class="section visual-section section_full ">
-       <div class="swiper visual_swiper ub-swiper ub-swiper-controls-bottom">
+        <div class="swiper visual_swiper ub-swiper ub-swiper-controls-bottom">
   <div class="swiper-wrapper">
     <!-- Slides -->
     <div class="swiper-slide">
@@ -185,7 +196,7 @@
 
 
   <script src="/myfolder/js/myscript.js"></script>
-  <!--@js(/myfolder/js/myscript.js")-->
+  <!--@js(/myfolder/js/myscript.js)-->
 </body>
 
 </html>

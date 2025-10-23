@@ -3,21 +3,25 @@ mystyle
 */
 
 
-/* *******************************
+/***********
 변수 variables
-******************** */
+******/
+
 @import url(/myfolder/css/ub-variables.css);
 
-
-/* *************
+/* ***********
 그리드시스템
  */
  @import url(/myfolder/css/ub-grid-system.css);
 
+:root{
+--primary-color:#1f1f1f;
+}
 
-/* *******************************
+
+/********
 .prdList
-******************** */
+** */
 
 .ec-base-product .prdList{
   display: flex;
@@ -27,7 +31,7 @@ mystyle
   /* border: 1px solid #f00; */
 }
 .main_product_slide .ec-base-product .prdList{
- flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .ec-base-product .prdList >li{
@@ -212,8 +216,6 @@ grid5  :nth-child(5n)
  section관련 스타일 수정
 */
 
-
-
 /* 
 1. section_full_content_center
 section 배경색
@@ -263,16 +265,16 @@ main_title이 content 너비 범위에서 left/center/right 정렬
   background-color: var(--section-bg);
   width:100%;
   max-width: none;
-  padding-top:var(--section-padding-top-bottem);
-  padding-bottom:var(--section-padding-top-bottem);
+  padding-top:var(--section-padding-top-bottom);
+  padding-bottom:var(--section-padding-top-bottom);
 }
 
 @media (min-width: 1024px) {
     #contents > .section_full_only_content > .main_title{
-       max-width: 1230px;
+        max-width: 1230px;
         width: 92%;
         margin-left: auto;
-        margin-right: auto;       
+        margin-right: auto;
     }
 }
 
@@ -283,7 +285,6 @@ hero section용
 */
 .visual-section{
   --visual-swiper-width:100%;
-  margin-bottom: 120px;
 }
 /* @media (min-width: 1024px) {
     #contents.ub-style .visual-section  {
@@ -363,7 +364,6 @@ swiper controls가 슬라이드 아래 표시
 
   /* 슬라이드 .swiper-wrapper 기준 세로 가운데 */
   align-items: center;  
-  gap: 20px;
 
 }
 .ub-swiper.ub-swiper-controls-bottom .swiper-slide{
@@ -429,7 +429,7 @@ swiper controls가 슬라이드 아래 표시
 .ub-swiper.ub-swiper-controls-bottom .swiper-pagination-progressbar {
   width: 100%;
   max-width: 85%;
-  height: 2px;
+  height: 4px;
   background: rgba(0,0,0,0.1);
 }
 
