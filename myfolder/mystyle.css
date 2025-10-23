@@ -6,17 +6,13 @@ mystyle
 /***********
 변수 variables
 ******/
-
 @import url(/myfolder/css/ub-variables.css);
 
-/* ***********
-그리드시스템
- */
- @import url(/myfolder/css/ub-grid-system.css);
 
-:root{
---primary-color:#1f1f1f;
-}
+/************
+그리드 시스템
+*/
+@import url(/myfolder/css/ub-grid-system.css);
 
 
 /********
@@ -224,10 +220,7 @@ main_title이 content 너비 범위에서 left/center/right 정렬
 */
 
 .section{
-  /*section관련  변수선언 */
-  --section-bg:#fea;
-  --section-padding-top-bottom:40px;
-  --section-main-banner-padding:16px;
+
 }
 
 /*         max-width: 1230px; */
@@ -285,6 +278,7 @@ hero section용
 */
 .visual-section{
   --visual-swiper-width:100%;
+  margin-bottom:120px;
 }
 /* @media (min-width: 1024px) {
     #contents.ub-style .visual-section  {
@@ -364,11 +358,12 @@ swiper controls가 슬라이드 아래 표시
 
   /* 슬라이드 .swiper-wrapper 기준 세로 가운데 */
   align-items: center;  
+  /* gap:20px; */
 
 }
 .ub-swiper.ub-swiper-controls-bottom .swiper-slide{
   width:100% !important;
-  transform: scale(0.9);
+  transform: scale(1);
   /*슬라이드를 하단에 정렬할 때는 transform-origin*/
   /* transform-origin: center bottom;  */
 
@@ -429,7 +424,7 @@ swiper controls가 슬라이드 아래 표시
 .ub-swiper.ub-swiper-controls-bottom .swiper-pagination-progressbar {
   width: 100%;
   max-width: 85%;
-  height: 4px;
+  height: 2px;
   background: rgba(0,0,0,0.1);
 }
 
@@ -471,4 +466,47 @@ swiper controls가 슬라이드 아래 표시
 .ub-swiper.ub-swiper-controls-bottom #btn-autoplay-toggle .icon-play.hidden,
 .ub-swiper.ub-swiper-controls-bottom #btn-autoplay-toggle .icon-pause.hidden{
   display: none;
+}
+
+/************
+단처리
+ub-dan
+*/
+
+.ub-dan{}
+.ub-dan-row{}
+.ub-dan-item{
+  border:1px solid #f00;
+}
+/**********
+단처리 태블릿 이하 스크롤
+.ub-dan-row.md-scroll
+*/
+@media (max-width:1024px){
+.ub-dan-row.md-scroll {
+  /* scroll */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width:100% !important;
+  justify-content: start;
+}
+.ub-dan-row.md-scroll .ub-dan-item{
+  /* scroll */
+   scroll-snap-align: center;
+   width: 85%;
+   max-width:50vw;
+
+   /* 요소 크기가 늘지도 줄지 말고 지정된 width값을 따라라 */
+   flex: none;
+}
+}
+@media (max-width:480px){
+  .ub-dan-row.md-scroll .ub-dan-item{
+    max-width: 100%;
+  }
+
 }
