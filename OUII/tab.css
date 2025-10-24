@@ -132,18 +132,18 @@ main_title main_product_tab 수평으로 배치
  justify-content: start;
 }
 /*뭔가안됨*/
-.section.tab-vertical  .main_product_tab >li {
+.section.tab-vertical .main_product_tab >li {
   margin:0;
-  padding:var(--space-sm-) var(--space-md-);
-  margin-bottom: var(--space-md-);
-  background-color:#efefef;
+  padding:var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+  background-color: #efefef;
 }
 /*
 li 에 배경을 넣는 다면   content:none
 li 에 배경을 넣지않는다면   content:none을 코멘트 처리
 */
-.section.tab-vertical  .main_product_tab >li button::after,
-.section.tab-vertical  .main_product_tab >li  button.active::after{
+.section.tab-vertical .main_product_tab >li button::after,
+.section.tab-vertical .main_product_tab >li button.active::after{
   content: none;
 }
 
