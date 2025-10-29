@@ -1,1 +1,4 @@
-#footer .inner
+/*푸터*/
+#footer .inner .bt_sns .bt_sns_box {
+  justify-content: start;
+}
