@@ -1,4 +1,104 @@
+
+/* 헤더네비게이션 빨간줄 */
+#header .inner .top_nav_box .top_category > ul > li:hover > a:after {   
+    background-color: #f00;
+}
+#header .inner .top_nav_box .top_category > ul > li > a:after {    
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #cfcfcf;    
+}
+/*화면작아질때 선이 위로올라가는 이슈 해결*/
+#header .inner .top_nav_box .top_category > ul > li > a {    
+    line-height: 2;   
+}
+@media (max-width: 1780px) {
+    #header .inner .top_nav_box .top_category > ul > li > a {
+        line-height: 2;
+    }
+}
+
+/* 메인타이틀 윗여백 교정 */
+.main_image_text_gallery .main_title {
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+/* 여백관리 */
+.main_product_list .main_title {
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+/* 질문~~~~ */
+@media (min-width: 1024px) {
+    #contents > .section {
+       margin-bottom: 120px;
+    }
+}
+
+
+/* 질문1.히어로배너 스와이퍼 빨간색으로 변경하고싶다 */
+.smart-banner-wrapper.square .bx-pager.bx-default-pager a {
+    
+    height: 3px!important;   
+    
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover {
+    /* 활성화/호버 시 색상만 변경 */
+    background: rgb(243 4 4 / 80%) !important; 
+}
+
+/* .bx-wrapper .bx-pager.bx-default-pager a {
+    /* 기본 버튼의 display 속성을 inline-block으로 설정하여 width/height 적용 가능하게 함 */
+    display: inline-block; 
+    /* 기존의 둥근 모양을 제거하고 사각형 모양으로 만듦 */
+    border-radius: 0 !important; 
+    /* 라인 너비 지정 */
+    width: 20px !important; 
+    /* 기존의 border가 있다면 제거 */
+    border: none !important;
+    /* 높이를 2px로 변경 (얇은 라인) */
+    height: 2px !important;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:hover {
+    /* 활성화/호버 시 색상만 변경 */
+    background: rgb(243 4 4 / 80%) !important; 
+}
+
+/* 중요: 점 주변에 여백을 주는 요소에 height: 2px을 적용할 수도 있습니다. */
+.bx-wrapper .bx-pager-item {
+    height: 2px !important; 
+} */
+
+
+
+/* 질문2******Best&New 밑줄 빨간색 안된다***********/
+.main_product_category .main_product_tab li .button::after {
+  
+    background-color: #F00;
+    transform: scale(0);
+    transform-origin: right center;
+    transition: transform 0.2s 
+ease-in;
+}
+
+/* .main_product_category .main_product_tab li .button.active::after {
+    transform: scale(100%);
+    transform-origin: left center;
+    transition: transform 0.3s 
+ease-in;
+    background-color: #f00!important;
+} */
+
+
+
+
+
 /*푸터*/
 #footer .inner .bt_sns .bt_sns_box {
   justify-content: start;
 }
+
