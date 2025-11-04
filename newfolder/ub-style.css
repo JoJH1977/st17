@@ -48,16 +48,43 @@
 
 
 
-/* 중요: 점 주변에 여백을 주는 요소에 height: 2px을 적용할 수도 있습니다. */
-.bx-wrapper .bx-pager-item {
-    height: 2px !important; 
-} */
+
 
 
 /*********** 카테고리 빨간밑줄 성공*************/
 .main_product_category .main_product_tab li .button.active::after {
-    background-color: #f00!important;
+    background-color: #f00 !important; }
+
+
+/*    
+.main_product_category .main_product_tab li .button.active::after {
+
+    background-color: #f00;
+} */
+
+/* .main_product_category .main_product_tab li .button.active:after {background-color: #f00;}
+.main_product_category .main_product_tab li .button.active:after {
+    background-color: #f00;} 
+
+    .main_product_category .main_product_tab li .button::after {
+   
+    background-color: #f00;} */
+
+
+/********************wish버튼 색상변경***************/
+.ec-base-product .prdList .prdList__item .icon__box > span {
+    
+    color: #f20202;
+    
 }
+
+.ec-base-product .prdList .prdList__item .icon__box > span:hover, .ec-base-product .prdList .prdList__item .icon__box > span.on {
+    background-color: #fb0404;
+    border: 1px solid #f8f7f7;
+    color: rgb(251 246 246);
+}
+
+
 
 
 /*푸터*/
