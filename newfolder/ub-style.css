@@ -74,14 +74,16 @@
 /********************wish버튼 색상변경***************/
 .ec-base-product .prdList .prdList__item .icon__box > span {
     
-    color: #f20202;
+    color: #0c0c0c;
+    
     
 }
 
 .ec-base-product .prdList .prdList__item .icon__box > span:hover, .ec-base-product .prdList .prdList__item .icon__box > span.on {
-    background-color: #fb0404;
-    border: 1px solid #f8f7f7;
-    color: rgb(251 246 246);
+    background-color:#fff;
+    border: 1px solid #fff;
+    color: rgb(245, 3, 3);
+   
 }
 
 
