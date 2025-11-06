@@ -1,4 +1,4 @@
-<div class="main_top_banner ez-align-left" data-ez-module="top-banner" data-ez-align="left" data-ez-role="style.color" data-ez-display="visible">
+<div class="main_top_banner ez-align-left" data-ez-module="top-banner" data-ez-align="left" data-ez-role="style.color" data-ez-display="visible" data-ez="contents-0gwa2qu-1">
 	<div class="top_banner_box_inner">
 		<div class="top_banner_text"><!-- 최상단 배너 수정하는곳 -->
 			<a data-ez-role="a" href="#" data-href="#" target="_self" style="color: black;">첫 쇼핑을 지원하는 3,000원 할인 회원가입 쿠폰</a>
@@ -10,8 +10,8 @@
 		</div><!-- //top_banner_close -->
 	</div><!-- //top_banner_box_inner -->
 </div>
-<header id="header" class="layout1" data-ez-layout="layout1">
-	<ez-prop data-version="1.0.0">
+<header id="header" class="layout1" data-ez-layout="layout1" data-ez="contents-0i0ldrh-1">
+	<ez-prop data-version="1.0.0" type="layout">
 		<ez-var data-prop="layout" data-namespace="ez.layout.header.layout" data-type="array">
 			<ez-item data-id="layout3" data-name="1단 기본형"></ez-item>
 			<ez-item data-id="layout2" data-name="2단 좌측형"></ez-item>
@@ -69,27 +69,14 @@
 			<div class="top_logo" module="Layout_LogoTop"><a href="/"><img src="{$logo}" alt="{$mall_name}"></a></div><!-- //top_logo -->
 			<div class="top_nav"><a href="javascript:;" class="eNavFold"><i aria-hidden="true" class="icon icoNav"></i></a></div>
 
-<!-- GNB 왼쪽 햄버거 버튼 -->
-<div class="hamburger_button show-pc">
-  <button id="btnHamburger" class="btn-hamburger" type="button" aria-controls="allmenu" aria-expanded="true" aria-label="전체메뉴 열기" data-role="hamburger">
-    <span class="hamburger_line"></span>
-    <span class="hamburger_line"></span>
-    <span class="hamburger_line"></span>
-  </button>
+			<div data-ez-module="menu-main/1" data-ez-mode="manual">
+        <div class="xans-element- xans-layout xans-layout-category top_category">
+<ul><li><a href="/category/%EC%8B%A0%EC%83%81%ED%92%88/60/">신상품</a></li><li><a href="/category/%EB%AA%A9%EA%B1%B8%EC%9D%B4/42/">목걸이</a><ul class="sub_cate01"><li><a href="/category/%EC%A4%91%EB%B6%84%EB%A5%981/47/">중분류1</a></li><li><a href="/category/%EC%A4%91%EB%B6%84%EB%A5%982/48/">중분류2</a><ul class="sub_cate02"><li><a href="/category/%EC%86%8C%EB%B6%84%EB%A5%981/49/">소분류1</a></li><li><a href="/category/%EC%86%8C%EB%B6%84%EB%A5%982/50/">소분류2</a><ul class="sub_cate03"><li><a href="/category/%EC%83%81%EC%84%B8%EB%B6%84%EB%A5%981/51/">상세분류1</a></li><li><a href="/category/%EC%83%81%EC%84%B8%EB%B6%84%EB%A5%982/52/">상세분류2</a></li></ul></li></ul></li></ul></li><li><a href="/category/%EA%B7%80%EA%B1%B8%EC%9D%B4/43/">귀걸이</a></li><li><a href="/category/%EB%B0%98%EC%A7%80/44/">반지</a></li><li><a href="/category/%ED%8C%94%EC%B0%8C/45/">팔찌</a></li><li><a href="/category/%EA%B8%B0%ED%83%80/46/">기타</a></li><li><a href="/project/%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4/63/">기획전</a></li><li><a href="/shopinfo/company.html">젬미스트리</a></li></ul>
 </div>
-<!-- // 올메뉴를 위한 햄버거 -->
+      </div><!-- //menu-main/1 -->
 
-
-			<div data-ez-module="menu-main/1">
-				<div module="Layout_category" class="top_category">
-					<!--@js(/js/module/layout/category.js)-->
-					<ul>
-						<li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
-						<li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
-					</ul>
-				</div>
-			</div><!-- //menu-main/1 -->
-
+		
+			</div>
 
 			<div class="top_mypage">
 				<a href="javascript:;" class="eSearch"><!--@import(/svg/icon-search.html)--></a>
@@ -97,9 +84,6 @@
 				<a href="/order/basket.html" module="Layout_orderBasketcount"><!--@import(/svg/icon-cart.html)--><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
 			</div><!-- //top_mypage -->
 		</div><!-- //top_nav_box -->
-
-		<!-- 올메뉴추가 -->
-		<!--@important(/myfolder/allmenu.html)-->
-		
 	</div><!-- //inner -->
 </header>
+<!--#ez="1/20"-->
