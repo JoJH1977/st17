@@ -69,17 +69,6 @@
 			<div class="top_logo" module="Layout_LogoTop"><a href="/"><img src="{$logo}" alt="{$mall_name}"></a></div><!-- //top_logo -->
 			<div class="top_nav"><a href="javascript:;" class="eNavFold"><i aria-hidden="true" class="icon icoNav"></i></a></div>
 
-<!-- GNB 왼쪽 햄버거 버튼 -->
-<div class="hamburger_button show-pc">
-  <button id="btnHamburger" class="btn-hamburger" type="button" aria-controls="allmenu" aria-expanded="true" aria-label="전체메뉴 열기" data-role="hamburger">
-    <span class="hamburger_line"></span>
-    <span class="hamburger_line"></span>
-    <span class="hamburger_line"></span>
-  </button>
-</div>
-<!-- // 올메뉴를 위한 햄버거 -->
-
-
 			<div data-ez-module="menu-main/1">
 				<div module="Layout_category" class="top_category">
 					<!--@js(/js/module/layout/category.js)-->
@@ -87,9 +76,8 @@
 						<li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
 						<li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
 					</ul>
-				</div>
+			    </div>
 			</div><!-- //menu-main/1 -->
-
 
 			<div class="top_mypage">
 				<a href="javascript:;" class="eSearch"><!--@import(/svg/icon-search.html)--></a>
@@ -97,9 +85,5 @@
 				<a href="/order/basket.html" module="Layout_orderBasketcount"><!--@import(/svg/icon-cart.html)--><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
 			</div><!-- //top_mypage -->
 		</div><!-- //top_nav_box -->
-
-		<!-- 올메뉴추가 -->
-		<!--@important(/myfolder/allmenu.html)-->
-		
 	</div><!-- //inner -->
 </header>

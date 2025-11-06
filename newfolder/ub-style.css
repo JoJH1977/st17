@@ -79,14 +79,27 @@
     
 }
 
+/* .ec-base-product .prdList .prdList__item .icon__box > span {
+      transition: color 0.3s ease, font-size 0.3s ease;
+   } */
+
 .ec-base-product .prdList .prdList__item .icon__box > span:hover, .ec-base-product .prdList .prdList__item .icon__box > span.on {
     background-color:#fff;
     border: 1px solid #fff;
-    color: rgb(245, 3, 3);
-   
+    color:#f00;
+     transition: color 0.3s ease, font-size 0.3s ease;
+   /* font-size: 1.2em; */
 }
 
+/* 아이콘 박스 후버시 보더 없이고 글씨만 빨간색으로 커지게 */
+/* .ec-base-product .prdList .prdList__item .icon__box > span {
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
 
+.ec-base-product .prdList .prdList__item .icon__box > span:hover, 
+.ec-base-product .prdList .prdList__item .icon__box > span.on {
+    color: rgb(245, 3, 3);
+    font-size: 1.2em;} 원하는 크기로 조절 가능} */
 
 
 /*푸터*/

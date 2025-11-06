@@ -839,3 +839,90 @@ content_list
         justify-content: center;
     }
 }
+
+/* 11/6 헤더네비 서브타이틀 후버시색상변경 */
+    #header .inner .top_nav_box .top_category .sub_cate01 li.on a, 
+    #header .inner .top_nav_box .top_category .sub-category li.on a {
+       color: #f00;  }
+
+       /* 뱃지 모바일에서 없애기 */
+@media (max-width: 1024px) {
+       .ec-base-product .prdList .thumbnail .prdIcon {
+      background-image:none!important;  }}
+      
+
+
+/* 11/6 aside 후버시 메뉴 색상 변경  */
+/* #aside .navigation-menu__board ul li a:hover,
+#aside .navigation-menu__category .view:hover,
+#aside .navigation-menu__project .view:hover {
+  color: #f00;
+} */
+/* 11/6 aside 후버시 메뉴 변경 트랜지션  */
+/* #aside .navigation-menu__board ul li a,
+#aside .navigation-menu__category .view,
+#aside .navigation-menu__project .view {
+  transition: color 0.3s ease;
+}
+
+#aside .navigation-menu__board ul li a:hover,
+#aside .navigation-menu__category .view:hover,
+#aside .navigation-menu__project .view:hover {
+  color: #f00;
+} */
+
+/* 11/6 aside 후버시 메뉴 밑줄 변경 트랜지션  */
+#aside .navigation-menu__board ul li a,
+#aside .navigation-menu__category .view,
+#aside .navigation-menu__project .view {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#aside .navigation-menu__board ul li a::after,
+#aside .navigation-menu__category .view::after,
+#aside .navigation-menu__project .view::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f00;
+  transition: width 0.3s ease;
+}
+
+#aside .navigation-menu__board ul li a:hover,
+#aside .navigation-menu__category .view:hover,
+#aside .navigation-menu__project .view:hover {
+  color: #f00;
+}
+
+#aside .navigation-menu__board ul li a:hover::after,
+#aside .navigation-menu__category .view:hover::after,
+#aside .navigation-menu__project .view:hover::after {
+  width: 100%;
+}
+
+ /* aside 상단 메뉴 후버시 글자색 변경  */
+#aside .navigation_member .navigation_state a {
+  transition: color 0.3s ease;
+}
+
+#aside .navigation_member .navigation_state a:hover {
+  color: #f00;
+}
+
+
+/* 아이콘 박스 후버시 보더 없이고 글씨만 빨간색으로 커지게 */
+/* .ec-base-product .prdList .prdList__item .icon__box > span {
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.ec-base-product .prdList .prdList__item .icon__box > span:hover, 
+.ec-base-product .prdList .prdList__item .icon__box > span.on {
+    color: rgb(245, 3, 3);
+    font-size: 1.2em;} 원하는 크기로 조절 가능} */
+
+
+      /* aside 메뉴 너비변경  */
