@@ -64,6 +64,7 @@ bottom:10px;
 .ec-base-product .prdList>li:hover .prdList__item .thumbnail .icon__box{
   opacity: 1;
   transition: opacity 0.5s;
+
 }
 
 .ec-base-product .prdList .prdList__item .icon__box > span {
@@ -72,8 +73,9 @@ bottom:10px;
     font-size: 11px;
     font-weight: 500;
     color: #000;
-    /* background-color: transparent; */
-    border: 1px solid #fff;
+     background-color: transparent; 
+    /* border: 1px solid #fff; */
+    border: none;
     border-radius: 10px;
     box-sizing: border-box;
     cursor: pointer;
@@ -838,9 +840,9 @@ content_list
 
 
 
-  /* *******************
+  /* ****************************************************
 헤더관련변경
-************************************* */
+********************************************************* */
 
 /*********** 헤더 네비카테고리 빨간밑줄 성공*************/
 .main_product_category .main_product_tab li .button.active::after {
@@ -894,22 +896,6 @@ content_list
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /* 11/5***헤더_카테고리 메뉴 중앙으로 변경 최대480까지  */
   @media (max-width: 480px) {
     .main_product_category .main_product_tab {
@@ -923,18 +909,13 @@ content_list
     color: #f00;
   }
 
-  /* 11/6 바디_뱃지 모바일에서 없애기 */
-  @media (max-width: 1024px) {
-    .ec-base-product .prdList .thumbnail .prdIcon {
-      background-image: none !important;
-    }
-  }
+  
 
 
 
-  /* **************************
+  /* **********************************************
 aside 메뉴관련
-***************************** */
+***************************** ***************************/
 
   /* 11/6 aside 후버시 메뉴 밑줄 변경 트랜지션  */
   #aside .navigation-menu__board ul li a,
@@ -969,7 +950,8 @@ aside 메뉴관련
     width: 100%;
   }
 
-  /* 모바일에서 밑줄 제거 */
+  /* 모바일에서 밑줄 제거 
+  나중에 런칭전에 실행하기*/
   /* @media (max-width: 1024px) {
   #aside .navigation-menu__board ul li a::after,
   #aside .navigation-menu__category .view::after,
@@ -988,6 +970,29 @@ aside 메뉴관련
   }
 
 
+
+
+
+
+
+
+
+
+
+
+/* ************************************************
+바디 관련
+************************************************** */
+/* 11/6 바디_뱃지 모바일에서 없애기 */
+  @media (max-width: 1024px) {
+    .ec-base-product .prdList .thumbnail .prdIcon {
+      background-image: none !important;
+    }
+  }
+
+
+
+
   /* 아이콘 박스 후버시 보더 없이고 글씨만 빨간색으로 커지게 */
   /* .ec-base-product .prdList .prdList__item .icon__box > span {
     transition: color 0.3s ease, font-size 0.3s ease;
@@ -1000,7 +1005,7 @@ aside 메뉴관련
 
 
 
-  /****************** 
+  /******************** 
     이미지텍스트 갤러리관련변경
      ******************************/
   /* 11/7 이미지텍스트갤러리_PC글씨밑줄레드 MB글씨만레드*/
@@ -1036,6 +1041,34 @@ aside 메뉴관련
   }
 
 
+/* 아이콘박스 색상변경 */
+/* 아이콘 박스 호버 효과 */
+
+
+
+/* 아이콘 박스 기본 설정 */
+ .icon__box span {    
+    background-color: transparent!important;
+}
+/* 호버 시 글자 색상 빨간색 + 크기 증가 */
+.icon__box span:hover {
+    color: #f00 !important;
+    font-size: 1.2em;
+      background-color: #fdfdfd!important; 
+      border: none !important;
+}
+
+/* 이미지는 그대로 유지 (선택사항)
+/* .icon__box span img {
+    transition: none;
+} */
+
+
+/* .icon__box:hover {
+    background-color: transparent !important;
+    border: none !important;
+}  */
+
 
 
 
@@ -1043,29 +1076,5 @@ aside 메뉴관련
 #footer .inner .bt_sns .bt_sns_box {
   justify-content: start;
 }
-  color: rgb(154, 154, 154);
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  width: fit-content;
-}
+ 
 
-.main_banner_more::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: red;
-  transition: width 0.4s ease;
-}
-
-.main_banner_more:hover {
-  color: red;
-}
-
-.main_banner_more:hover::after {
-  width: 100%;
-} */

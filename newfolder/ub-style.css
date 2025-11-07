@@ -23,24 +23,6 @@
     background-color: #f00;} */
 
 
-/********************wish버튼 색상변경***************/
-.ec-base-product .prdList .prdList__item .icon__box > span {
-    
-    color: #0c0c0c;
-   }
-
-/* .ec-base-product .prdList .prdList__item .icon__box > span {
-      transition: color 0.3s ease, font-size 0.3s ease;
-   } */
-
-.ec-base-product .prdList .prdList__item .icon__box > span:hover, 
-.ec-base-product .prdList .prdList__item .icon__box > span.on {
-    background-color:#fff;
-    border: 1px solid #fff;
-    color:#f00;
-     transition: color 0.3s ease, font-size 0.3s ease;
-   /* font-size: 1.2em; */
-}
 
 
 
