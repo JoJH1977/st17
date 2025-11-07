@@ -820,102 +820,176 @@ content_list
 /* **********
 배너매니저 동영상 스타일
 */
-    .df-bannermanager {width:100%; }
-    .df-bannermanager div[df-banner-clone]{ 
-      width: 100%; aspect-ratio: 16/9;  
+  .df-bannermanager {
+    width: 100%;
+  }
+
+  .df-bannermanager div[df-banner-clone] {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .df-bannermanager div[df-banner-clone] iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+
+  /* *******************
+헤더관련변경
+************************************* */
+
+/*********** 헤더 네비카테고리 빨간밑줄 성공*************/
+.main_product_category .main_product_tab li .button.active::after {
+    background-color: #f00 !important; }
+
+/* 헤더네비게이션 빨간줄 */
+#header .inner .top_nav_box .top_category > ul > li:hover > a:after {   
+    background-color: #f00;
+}
+#header .inner .top_nav_box .top_category > ul > li > a:after {    
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #cfcfcf;    
+}
+/*화면작아질때 선이 위로올라가는 이슈 해결*/
+#header .inner .top_nav_box .top_category > ul > li > a {    
+    line-height: 2;   
+}
+@media (max-width: 1780px) {
+    #header .inner .top_nav_box .top_category > ul > li > a {
+        line-height: 2;
     }
-    .df-bannermanager div[df-banner-clone] iframe{
-      display: block; width: 100%; height: 100%;
+}
+
+/* 메인타이틀 윗여백 교정 */
+.main_image_text_gallery .main_title {
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+/* 여백관리 */
+.main_product_list .main_title {
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+/* 질문~~~~ */
+@media (min-width: 1024px) {
+    #contents > .section {
+       margin-bottom: 120px;
     }
+}
+
+
+/* 질문1.히어로배너 스와이퍼 빨간색으로 변경하고싶다 */
+.smart-banner-wrapper.square .bx-pager.bx-default-pager a {
+        height: 3px!important;       
+}
+.smart-banner-bx-wrapper .bx-pager.bx-default-pager a:hover, .smart-banner-bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #f00!important;
+}
 
 
 
 
 
 
-/* 11/5***카테고리 메뉴 중앙으로 변경 최대480까지  */
-    @media (max-width: 480px) {
+
+
+
+
+
+
+
+
+
+
+
+
+  /* 11/5***헤더_카테고리 메뉴 중앙으로 변경 최대480까지  */
+  @media (max-width: 480px) {
     .main_product_category .main_product_tab {
-        justify-content: center;
+      justify-content: center;
     }
-}
+  }
 
-/* 11/6 헤더네비 서브타이틀 후버시색상변경 */
-    #header .inner .top_nav_box .top_category .sub_cate01 li.on a, 
-    #header .inner .top_nav_box .top_category .sub-category li.on a {
-       color: #f00;  }
+  /* 11/6 헤더_네비 서브타이틀 후버시색상변경 */
+  #header .inner .top_nav_box .top_category .sub_cate01 li.on a,
+  #header .inner .top_nav_box .top_category .sub-category li.on a {
+    color: #f00;
+  }
 
-       /* 뱃지 모바일에서 없애기 */
-@media (max-width: 1024px) {
-       .ec-base-product .prdList .thumbnail .prdIcon {
-      background-image:none!important;  }}
-      
+  /* 11/6 바디_뱃지 모바일에서 없애기 */
+  @media (max-width: 1024px) {
+    .ec-base-product .prdList .thumbnail .prdIcon {
+      background-image: none !important;
+    }
+  }
 
 
-/* 11/6 aside 후버시 메뉴 색상 변경  */
-/* #aside .navigation-menu__board ul li a:hover,
-#aside .navigation-menu__category .view:hover,
-#aside .navigation-menu__project .view:hover {
-  color: #f00;
+
+  /* **************************
+aside 메뉴관련
+***************************** */
+
+  /* 11/6 aside 후버시 메뉴 밑줄 변경 트랜지션  */
+  #aside .navigation-menu__board ul li a,
+  #aside .navigation-menu__category .view,
+  #aside .navigation-menu__project .view {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  #aside .navigation-menu__board ul li a::after,
+  #aside .navigation-menu__category .view::after,
+  #aside .navigation-menu__project .view::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f00;
+    transition: width 0.3s ease;
+  }
+
+  #aside .navigation-menu__board ul li a:hover,
+  #aside .navigation-menu__category .view:hover,
+  #aside .navigation-menu__project .view:hover {
+    color: #f00;
+  }
+
+  #aside .navigation-menu__board ul li a:hover::after,
+  #aside .navigation-menu__category .view:hover::after,
+  #aside .navigation-menu__project .view:hover::after {
+    width: 100%;
+  }
+
+  /* 모바일에서 밑줄 제거 */
+  /* @media (max-width: 1024px) {
+  #aside .navigation-menu__board ul li a::after,
+  #aside .navigation-menu__category .view::after,
+  #aside .navigation-menu__project .view::after {
+    display: none;
+  }
 } */
-/* 11/6 aside 후버시 메뉴 변경 트랜지션  */
-/* #aside .navigation-menu__board ul li a,
-#aside .navigation-menu__category .view,
-#aside .navigation-menu__project .view {
-  transition: color 0.3s ease;
-}
 
-#aside .navigation-menu__board ul li a:hover,
-#aside .navigation-menu__category .view:hover,
-#aside .navigation-menu__project .view:hover {
-  color: #f00;
-} */
+  /* 11/6 aside 상단 메뉴 후버시 글자색 변경  */
+  #aside .navigation_member .navigation_state a {
+    transition: color 0.3s ease;
+  }
 
-/* 11/6 aside 후버시 메뉴 밑줄 변경 트랜지션  */
-#aside .navigation-menu__board ul li a,
-#aside .navigation-menu__category .view,
-#aside .navigation-menu__project .view {
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-#aside .navigation-menu__board ul li a::after,
-#aside .navigation-menu__category .view::after,
-#aside .navigation-menu__project .view::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: #f00;
-  transition: width 0.3s ease;
-}
-
-#aside .navigation-menu__board ul li a:hover,
-#aside .navigation-menu__category .view:hover,
-#aside .navigation-menu__project .view:hover {
-  color: #f00;
-}
-
-#aside .navigation-menu__board ul li a:hover::after,
-#aside .navigation-menu__category .view:hover::after,
-#aside .navigation-menu__project .view:hover::after {
-  width: 100%;
-}
-
- /* aside 상단 메뉴 후버시 글자색 변경  */
-#aside .navigation_member .navigation_state a {
-  transition: color 0.3s ease;
-}
-
-#aside .navigation_member .navigation_state a:hover {
-  color: #f00;
-}
+  #aside .navigation_member .navigation_state a:hover {
+    color: #f00;
+  }
 
 
-/* 아이콘 박스 후버시 보더 없이고 글씨만 빨간색으로 커지게 */
-/* .ec-base-product .prdList .prdList__item .icon__box > span {
+  /* 아이콘 박스 후버시 보더 없이고 글씨만 빨간색으로 커지게 */
+  /* .ec-base-product .prdList .prdList__item .icon__box > span {
     transition: color 0.3s ease, font-size 0.3s ease;
 }
 
@@ -925,4 +999,73 @@ content_list
     font-size: 1.2em;} 원하는 크기로 조절 가능} */
 
 
-      /* aside 메뉴 너비변경  */
+
+  /****************** 
+    이미지텍스트 갤러리관련변경
+     ******************************/
+  /* 11/7 이미지텍스트갤러리_PC글씨밑줄레드 MB글씨만레드*/
+  .main_banner_more {
+    color: rgb(154, 154, 154) !important;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: fit-content;
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+
+  .main_banner_more::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.4s ease;
+  }
+
+  .main_banner_more:hover {
+    color: red !important;
+    text-decoration: none !important;
+  }
+
+  .main_banner_more:hover::after {
+    width: 100%;
+  }
+
+
+
+
+
+  /*푸터*/
+#footer .inner .bt_sns .bt_sns_box {
+  justify-content: start;
+}
+  color: rgb(154, 154, 154);
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  width: fit-content;
+}
+
+.main_banner_more::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.4s ease;
+}
+
+.main_banner_more:hover {
+  color: red;
+}
+
+.main_banner_more:hover::after {
+  width: 100%;
+} */
