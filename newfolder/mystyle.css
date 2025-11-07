@@ -970,10 +970,14 @@ aside 메뉴관련
   }
 
 
+/* 11/7 aside 서브카테고리 빨간줄제거  */
+#aside .navigation-menu__category #slide_add_category li.selected .sub_cate01 li:hover a.view:after {
+  content:none;
+}
 
-
-
-
+#aside .navigation-menu__category #slide_add_category li.selected .sub_cate01 li:hover a.view {
+  color: #f00;
+}
 
 
 
@@ -1041,16 +1045,14 @@ aside 메뉴관련
   }
 
 
-/* 아이콘박스 색상변경 */
-/* 아이콘 박스 호버 효과 */
-
-
-
+/* 
+아이콘박스 색상변경 
+*/
 /* 아이콘 박스 기본 설정 */
  .icon__box span {    
     background-color: transparent!important;
 }
-/* 호버 시 글자 색상 빨간색 + 크기 증가 */
+/* 호버 시 글자 색상 빨간색 + 크기 증가(안먹음) */
 .icon__box span:hover {
     color: #f00 !important;
     font-size: 1.2em;
@@ -1058,16 +1060,6 @@ aside 메뉴관련
       border: none !important;
 }
 
-/* 이미지는 그대로 유지 (선택사항)
-/* .icon__box span img {
-    transition: none;
-} */
-
-
-/* .icon__box:hover {
-    background-color: transparent !important;
-    border: none !important;
-}  */
 
 
 
