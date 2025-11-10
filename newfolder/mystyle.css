@@ -1097,11 +1097,16 @@ aside 메뉴관련
 
 
 /* cart WishList 박스 변경 */
-[class^='btnNormal']:not(.disabled):hover, [class^='btnNormal']:not(.disabled).selected {
+/* [class^='btnNormal']:not(.disabled):hover, [class^='btnNormal']:not(.disabled).selected {
+    border-color: var(--font-color-warn);
+    color: #f00;
+} */
+/* cart WishList 박스만 변경 */
+.xans-product-action .action_button [class^='btnNormal']:not(.disabled):hover, 
+.xans-product-action .action_button [class^='btnNormal']:not(.disabled).selected {
     border-color: var(--font-color-warn);
     color: #f00;
 }
-
 
 
 
