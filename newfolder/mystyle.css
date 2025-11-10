@@ -1064,6 +1064,54 @@ aside 메뉴관련
 
 
 
+
+
+
+
+
+
+
+
+/****************************
+ 상세페이지관련
+******************************* */
+
+/* buy it now 버튼 변경*/
+[class^='btnSubmit'], a[class^='btnSubmit'] {
+    background: #fff;
+    color: #0e0d0d;
+    border: 1px solid #d7d5d5;
+}
+
+[class^='btnSubmit'], a[class^='btnSubmit'] {
+    background: #fff;
+    color: __var__(--font-color-base);
+    border: 1px solid #d7d5d5;
+    transition: color 0.3s ease, border 0.3s ease;
+}
+
+[class^='btnSubmit']:hover, a[class^='btnSubmit']:hover {
+    color: #f00;
+    border: 1px solid #f00;
+}
+
+
+/* cart WishList 박스 변경 */
+[class^='btnNormal']:not(.disabled):hover, [class^='btnNormal']:not(.disabled).selected {
+    border-color: var(--font-color-warn);
+    color: #f00;
+}
+
+
+
+
+
+
+
+
+
+
+
   /*푸터*/
 #footer .inner .bt_sns .bt_sns_box {
   justify-content: start;
