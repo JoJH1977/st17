@@ -847,6 +847,13 @@ content_list
 /*********** 헤더 네비카테고리 빨간밑줄 성공*************/
 .main_product_category .main_product_tab li .button.active::after {
     background-color: #f00 !important; }
+   
+    /* 11/11 */
+  /* 메인 페이지 전용 */
+.main-page .main_product_category .main_product_tab li .button.active::after,
+#main .main_product_category .main_product_tab li .button.active::after {
+    background-color: #f00 !important;
+}
 
 /* 헤더네비게이션 빨간줄 */
 #header .inner .top_nav_box .top_category > ul > li:hover > a:after {   
@@ -881,7 +888,7 @@ content_list
 
 /* 질문~~~~ */
 @media (min-width: 1024px) {
-    #contents > .section {
+  .main  #contents > .section {
        margin-bottom: 120px;
     }
 }
@@ -967,6 +974,8 @@ aside 메뉴관련
 
   #aside .navigation_member .navigation_state a:hover {
     color: #f00;
+
+   
   }
 
 
@@ -1059,6 +1068,72 @@ aside 메뉴관련
       background-color: #fdfdfd!important; 
       border: none !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************
+ 상세페이지관련
+******************************* */
+/* 상세페이지 숏츠관련 */
+.media-box {max-width:768px; margin: 0 auto;}
+.media-box.shorts{max-width:315px;}
+.iframe-wrap {width: 100%; aspect-ratio:16/9;}
+.shorts .iframe-wrap {width: 100%; aspect-ratio:9/16;}
+
+.iframe-wrap iframe{
+  display: block;
+  width: 100%;
+  height: 100%;}
+
+
+
+/* buy it now 버튼 변경*/
+[class^='btnSubmit'], a[class^='btnSubmit'] {
+    background: #fff;
+    color: #0e0d0d;
+    border: 1px solid #d7d5d5;
+}
+
+[class^='btnSubmit'], a[class^='btnSubmit'] {
+    background: #fff;
+    color: __var__(--font-color-base);
+    border: 1px solid #d7d5d5;
+    transition: color 0.3s ease, border 0.3s ease;
+}
+
+[class^='btnSubmit']:hover, a[class^='btnSubmit']:hover {
+    color: #f00;
+    border: 1px solid #f00;
+}
+
+
+/* cart WishList 박스 변경 */
+/* [class^='btnNormal']:not(.disabled):hover, [class^='btnNormal']:not(.disabled).selected {
+    border-color: var(--font-color-warn);
+    color: #f00;
+} */
+/* cart WishList 박스만 변경 */
+.xans-product-action .action_button [class^='btnNormal']:not(.disabled):hover, 
+.xans-product-action .action_button [class^='btnNormal']:not(.disabled).selected {
+    border-color: var(--font-color-warn);
+    color: #f00;
+}
+
+
+
+
+
+
 
 
 
